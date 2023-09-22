@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import List from './components/List';
+import Comment from './components/Comment';
 
 function App() {
+  const [lists, setLists] = useState([]);
+  const [selectedList, setSelectedList] = useState(null);
+  const [comments, setComments] = useState({});
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+        <List lists={lists} setLists={setLists} setSelectedList={setSelectedList} />
+        <Comment selectedList={selectedList} comments={comments[selectedList]} setComments={(newComments) => setComments({...comments,[selectedList]: newComments})} />
+      </div>
   );
 }
 
 export default App;
+

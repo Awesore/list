@@ -1,38 +1,156 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  gap: 10%;
+  justify-content: space-between;
+  padding: 2% 10%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+textarea{
+
+}
+
+.list {
+  font-family: sans-serif;
+  font-weight: 400;
+  color: #696868;
+  padding: 10px 5% 10px 20px;
+  border-radius: 2%;
+  background-color: #eee7e7;
+  box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.35);
+}
+
+
+
+
+
+
+/* Стилі для поля вводу текста для заголовків */
+.text-field__input {
+  width: 100%;
+  height: calc(1.25rem + 2px);
+  padding: 0.775rem 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #bdbdbd;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+
+/* Стилі для кнопки додавання нового стилю */
+.btn {
+  width: 210px;
+  height: 50px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 5px;
+  font-weight: 300;
+  background-color: #17a2b8;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  border: none;
+}
+.btn:hover{
+  background-color: #117d8d;
+}
+
+.items-list {
+
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 100%;
+  padding: 5%;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #bdbdbd;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.items-list.active {
+  background: linear-gradient(to right, #fa0000 5px, transparent 5px);
+  background-color: #fff;
+  background-size: 200% 100%;
+}
+
+
+.up-list{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.btn-delete {
+  color: red;
+  background-color: inherit;
+  font-family: SansSerif;
+  border: 1px solid red;
+  font-weight: 600;
+  padding: 15px 10px;
+  border-radius: 5%;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.btn-delete:hover{
+  background-color: red;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.active-li {
+  background-color: #ff0000; /* Встановіть бажаний колір тут */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*      ----------  COMMENT   -------*/
+
+
+
+.comment{
+  color: #696868;
+
+  padding: 10px 5% 10% 20px;
+  border-radius: 5%;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.35);
+}
+
+.comments-list{
+
+  list-style: none;
+  width: 90%;
+  height: 20%;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #bd2525;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.down-comment{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.comment-color {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  margin-left: 4px;
+
 }
